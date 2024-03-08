@@ -324,7 +324,7 @@ class ReviewExportForm(ExportForm):
         for score_category in self.score_categories:
             self.fields[f"score_{score_category.pk}"] = forms.BooleanField(
                 required=False,
-                label=str(_("Score in “{score_category}”")).format(
+                label=str(_("Score in '{score_category}'")).format(
                     score_category=score_category.name
                 ),
             )

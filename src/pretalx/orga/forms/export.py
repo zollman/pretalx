@@ -162,7 +162,7 @@ class ExportForm(forms.Form):
         content = output.getvalue()
         return HttpResponse(
             content,
-            content_type="text/plain",
+            content_type="text/plain; charset=utf-8",
             headers={
                 "Content-Disposition": f'attachment; filename="{self.filename}.csv"',
                 "Access-Control-Allow-Origin": "*",
